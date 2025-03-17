@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <a class="navbar-brand text-primary fw-bold" href="#">CITY HOSPITAL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link text-primary fw-semibold" routerLink="/appointmentlist">Appointments</a>
+        </li>
+      </ul>
+     <button style="margin:5px;" class="btn btn-danger" (click)="logout()">Logout</button>
+    </div>
+</nav>
+  
+<div class="container mt-4">
+    <div class="alert alert-info text-center fw-bold">
+      Welcome to the Admin Dashboard! Manage patient appointments below.
+    </div>
+
+    <h3 class="text-primary fw-bold">Current Patient List</h3>
+  
+    <div class="table-responsive mt-3">
+        <table class="table table-hover shadow-sm">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Disease</th>
+                    <th>Fees</th>
+                    <th>emergency</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let patient of patients">
+                    <td>{{ patient.id }}</td>
+                    <td>{{ patient.name }}</td>
+                    <td>{{ patient.age }}</td>
+                    <td>{{ patient.disease}}</td>
+                    <td>{{ patient.fees }}</td>
+                    
+                    <td>
+                        <span [ngClass]="{
+                            'badge bg-success': patient.emergency && patient.emergency.toLowerCase() === 'no',
+                            'badge bg-warning': patient.emergency && patient.emergency.toLowerCase() === 'yes'
+                        }">
+                            {{ patient.emergency ? patient.emergency : 'N/A' }}
+                        </span>
+                    </td>
+                    
+                    
+                    <td>
+                        <button (click)="delete(patient.id)" class="btn btn-danger">Delete</button>
+                        
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

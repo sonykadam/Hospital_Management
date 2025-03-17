@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <a class="navbar-brand text-primary fw-bold" href="#">CITY HOSPITALS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav me-auto">
+            <!--<li class="nav-item"><a class="nav-link text-primary fw-semibold" routerLink="/create-medicine">Add Medicine</a></li>-->
+            <li class="nav-item"><a class="nav-link text-primary fw-semibold" routerLink="/doc">Back</a></li>
+        </ul>
+        <ul class="navbar-nav me-auto">
+            <!--<li class="nav-item"><a class="nav-link text-primary fw-semibold" routerLink="/create-medicine">Add Medicine</a></li>-->
+            <li class="nav-item"><a class="nav-link text-primary fw-semibold" routerLink="/create-medicine">Add Mdicine</a></li>
+        </ul>
+        <!--<div class="mx-2">
+            <button style="margin: 5px;" class="btn btn-danger">Logout</button>
+        </div>-->
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="alert alert-info text-center fw-bold">
+      Welcome to the Medicine Management Dashboard! Manage medicine stock below.
+    </div>
+
+    <h3 class="text-primary fw-bold">Medicine List</h3>
+
+    <div class="table-responsive">
+        <table class="table table-hover shadow-sm">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>ID</th>
+                    <th>Drug Name</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let medicine of medicines">
+                    <td>{{medicine.id}}</td>
+                    <td>{{medicine.drugName}}</td>
+                    <td>{{medicine.stock}}</td>
+                   
+                        <button class="btn btn-info btn-sm" (click)="update(medicine.id)">Update</button>
+                        <button class="btn btn-danger btn-sm mx-1" (click)="delete(medicine.id)">Delete</button>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

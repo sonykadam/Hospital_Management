@@ -1,0 +1,97 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand font-weight-bold" href="#">CITY HOSPITAL</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="ml-auto">
+            <a class="btn btn-danger mx-1 text-white" routerLink="/doclogin">Login as Doctor</a>
+            <a class="btn btn-danger mx-1 text-white" routerLink="/adminlog">Login as Admin</a>
+        </div>
+    </div>
+</nav>
+
+
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img [src]="imgPath1" class="d-block w-100"alt="Hospital Bed" width="600" height="600">
+            <div class="carousel-caption d-none d-md-block">
+                <button class="btn btn-info"><h2>Welcome to CITY Hospital</h2></button>
+                <hr>
+                <button class="btn btn-purple">10000+ Patients Treated</button>
+                <button class="btn btn-orange">Advanced Treatment</button>
+                <button class="btn btn-success">Best Doctor & Surgeon</button>
+<style>
+    .btn-purple {
+        background-color: #8e44ad; /* Purple */
+        color: white;
+    }
+
+    .btn-orange {
+        background-color: #ff5733; /* Orange */
+        color: white;
+    }
+</style>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</div>
+    
+
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img [src]="imgPath2" class="d-block w-100"alt="Hospital Bed" width="200" height="150">
+                <div class="card-body">
+                    <h5 class="card-title">Why Choose CITY Healthcare?</h5>
+                    <p class="card-text">Largest network of top medical experts providing specialized treatments, emergency services, and preventive healthcare programs to ensure the well-being of patients.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img [src]="imgPath3" class="d-block w-100"alt="stop stroke" width="200" height="150">
+                <div class="card-body">
+                    <h5 class="card-title">Stop The Stroke!</h5>
+                    <p class="card-text">Stroke is a serious medical condition that occurs when blood flow to the brain is disrupted, leading to brain damage. However, strokes can be prevented by maintaining a healthy lifestyle. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img [src]="imgPath4" class="d-block w-100"alt="stop stroke" width="200" height="150">
+                <div class="card-body">
+                    <h5 class="card-title">Prevention is better than cure</h5>
+                    <p class="card-text">It's important to take precautions to avoid problems .In terms of health, preventing diseases through a healthy lifestyle is always better than undergoing treatment after falling ill.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img [src]="imgPath5" class="d-block w-100"alt="stop stroke" width="200" height="150">
+                <div class="card-body">
+                    <h5 class="card-title">Eat Healthy Live Healthy</h5>
+                    <p class="card-text">Eating healthy is the foundation of a long and active life. A balanced diet rich in fruits, vegetables,Proper nutrition helps prevent diseases, boosts immunity, and enhances overall well-being..</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<footer class="footer">
+    <p>📞 Contact: <strong>1860 344 5454</strong></p>
+    <p>© 2024-2025 CITY Hospitals, Inc.</p>
+</footer>
+

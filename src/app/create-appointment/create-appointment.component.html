@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <a class="navbar-brand text-primary fw-bold" href="#">CITY HOSPITAL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link text-primary fw-semibold" routerLink="/appointmentlist">
+                    <i class="bi bi-arrow-left"></i> Back
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <h3 class="text-primary fw-bold text-center">Add New Appointment</h3>
+    <div class="card shadow-sm p-4 mt-3">
+        <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="name" class="form-label fw-semibold">Name</label>
+                <input type="text" id="name" class="form-control" name="name" placeholder="Enter Your Name" [(ngModel)]="appointment.name" required />
+            </div>
+            
+            <div class="mb-3">
+                <label for="age" class="form-label fw-semibold">Age</label>
+                <input type="number" id="age" class="form-control" name="age" placeholder="Enter Age" [(ngModel)]="appointment.age" required />
+            </div>
+            
+            <div class="mb-3">
+                <label for="symptoms" class="form-label fw-semibold">Symptoms</label>
+                <input type="text" id="symptoms" class="form-control" name="symptoms" placeholder="Enter Symptoms" [(ngModel)]="appointment.symptoms" required />
+            </div>
+            
+            <div class="mb-3">
+                <label for="number" class="form-label fw-semibold">Phone Number</label>
+                <input type="tel" id="number" class="form-control" name="number" placeholder="Enter Phone Number" [(ngModel)]="appointment.number" required />
+            </div>
+            
+            <div class="d-grid">
+                <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+
+            </div>
+        </form>
+    </div>
+</div>

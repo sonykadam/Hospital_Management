@@ -1,0 +1,15 @@
+.footer {
+    background-color: #007bff; /* Primary blue background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-top: 5px solid #0056b3; /* Darker blue border for contrast */
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer p {
+    margin: 5px 0;
+}
