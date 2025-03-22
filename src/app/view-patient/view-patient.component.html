@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <a class="navbar-brand text-primary fw-bold" href="#">CITY HOSPITALS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav me-auto">
+            
+            <li class="nav-item"><a class="nav-link text-primary fw-semibold" routerLink="/doc">Back</a></li>
+        </ul>
+        <!--<div class="mx-2">
+            <button style="margin: 5px;" class="btn btn-danger">Logout</button>
+        </div>-->
+    </div>
+</nav>
+<br><br>
+<div class="container">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Disease</th>
+            <th>Prescription</th>
+            <th>Dose</th>
+            <th>Fees</th>
+        </tr>
+        <tr>
+            <td>{{patient.id}}</td>
+            <td>{{patient.name}}</td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.disease}}</td>
+            <td>{{patient.prescription}}</td>
+            <td>{{patient.dose}}</td>
+            <td>{{patient.fees}}</td>
+        </tr>
+    </table>
+</div>
+
+<style>
+    .container {
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+        cursor: pointer;
+    }
+</style>
